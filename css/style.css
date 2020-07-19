@@ -1,4 +1,4 @@
-/*@import 'https://fonts.googleapis.com/css?family=Rubik+One';*/
+/* @import 'https://fonts.googleapis.com/css?family=Rubik+One';
 #play-button
 {
     background: red;
@@ -7,12 +7,12 @@
     left: 50%;
     top: 50%;
 }
-.button::before, .button::after {
+.letter-button::before, .letter-button::after {
   position: absolute;
   content: '';
   transition: all 0.5s;
 }
-.button {
+.letter-button {
   display: inline-block;
   padding: 20px 40px;
   color: white;
@@ -27,7 +27,7 @@
   transition: all 0.5s;
   background-color: #3498db;
 }
-.button::before {
+.letter-button::before {
   bottom: -15px;
   height: 15px;
   width: 100%;
@@ -35,7 +35,7 @@
   transform: skewX(45deg);
   background-color: #196090;
 }
-.button::after {
+.letter-button::after {
   right: -15px;
   height: 100%;
   width: 15px;
@@ -43,17 +43,175 @@
   transform: skewY(45deg);
   background-color: #124364;
 }
-.button:active {
+.letter-button:active {
   margin-left: 10px;
   margin-top: 10px;
 }
-.button:active::before {
+.letter-button:active::before {
   bottom: -5px;
   height: 5px;
   left: 3px;
 }
-.button:active::after {
+.letter-button:active::after {
   right: -5px;
   width: 5px;
   bottom: -3px;
+} */
+
+/* body {
+	background: #ccc;
+}
+#cloud {
+	width: 175px; height: 60px;
+	
+	background: #f2f9fe;
+	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	
+	position: relative;
+	margin: 60px auto 10px;
+}
+
+#cloud:after, #cloud:before {
+	content: '';
+	position: absolute;
+	background: #f2f9fe;
+	z-index: 99;
+}
+
+#cloud:after {
+	width: 50px; height: 50px;
+	top: -25px; left: 25px;
+	
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+}
+
+#cloud:before {
+	width: 90px; height: 90px;
+	top: -45px; right: 25px;
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+.shadow {
+	width: 175px;
+	position: absolute; bottom: -5px; 
+	background: #000;
+	z-index: 99;
+	
+	box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+} */
+@font-face {
+  font-family: hundini;
+  src: url('../assets/font/HunDIN1451.ttf');
+}
+
+.button {
+  width: 100%;
+}
+
+#p5_loading{
+  background: rgb(59, 166, 219);
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  box-sizing: border-box;
+}
+
+.image-container
+{
+  margin: 20px auto;
+  box-sizing: border-box;
+  width: 500px;
+  height: 300px;
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;   
+}
+
+.image-container>img
+{
+  width: 100%;
+  height: 100%;
+}
+/*
+.text
+{
+  margin: 20px auto;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 20px;
+  font-family: 'hundini';
+  text-align: center;
+}
+*/
+/*http://tobiasahlin.com/spinkit/*/
+.spinner {
+  margin: auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
 }
